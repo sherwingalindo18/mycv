@@ -155,10 +155,14 @@ h4 {
   padding: 12px 22px;
 }
 .btn--ghost:hover {
-  background: currentColor;
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
 }
 .header.is-solid .btn--ghost:hover {
+  background: var(--black);
   color: var(--white);
+  border-color: var(--black);
 }
 .btn--full {
   width: 100%;
