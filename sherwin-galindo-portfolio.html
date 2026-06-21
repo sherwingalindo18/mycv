@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+
+  <title>Sherwin Galindo — Website Developer &amp; Designer</title>
+  <meta name="description" content="Sherwin Galindo is a professional website developer and designer creating high-converting, responsive websites for businesses. Custom web design, development, landing pages, SEO, and maintenance." />
+  <meta name="author" content="Sherwin Galindo" />
+  <meta name="keywords" content="Website Developer, Web Designer, Frontend Developer, UI/UX, Landing Pages, SEO, Business Websites, Sherwin Galindo" />
+  <link rel="canonical" href="https://sherwingalindo.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sherwin Galindo — Website Developer &amp; Designer" />
+  <meta property="og:description" content="Creating high-converting websites that help businesses grow. Professional web design, development, and digital experiences built for performance, branding, and results." />
+  <meta property="og:url" content="https://sherwingalindo.com/" />
+  <meta property="og:site_name" content="Sherwin Galindo" />
+  <meta property="og:image" content="https://s0.wp.com/mshots/v1/https%3A%2F%2Fthe86west.com%2F?w=1200&h=630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sherwin Galindo — Website Developer &amp; Designer" />
+  <meta name="twitter:description" content="Creating high-converting websites that help businesses grow." />
+
+  <!-- Preconnect for thumbnail service -->
+  <link rel="preconnect" href="https://s0.wp.com" crossorigin />
+
+  <!-- Fonts: system-first stack handled in CSS; no blocking external font requests -->
+  <style>
+/* ============================================================
+   Sherwin Galindo — Luxury Portfolio
+   Black & White / Minimal / Premium
+   ============================================================ */
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --c-111: #111111;
+  --c-1a: #1a1a1a;
+  --c-f5: #f5f5f5;
+  --gray: #8a8a8a;
+  --gray-2: #6a6a6a;
+  --line: rgba(255, 255, 255, 0.12);
+  --line-dark: rgba(0, 0, 0, 0.12);
+  --gold: #c9a227;
+
+  --container: 1240px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-h: 76px;
+
+  --font: "Helvetica Neue", Helvetica, "Inter", "Segoe UI", system-ui, -apple-system,
+    Arial, sans-serif;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--white);
+  color: var(--c-111);
+  line-height: 1.6;
+  font-weight: 400;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--black);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 999;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Typography helpers ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0;
+  border: 1px solid transparent;
+  transition: background 0.4s var(--ease), color 0.4s var(--ease),
+    border-color 0.4s var(--ease), transform 0.4s var(--ease);
+  will-change: transform;
+}
+.btn--solid {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.btn--solid:hover {
+  background: transparent;
+  color: var(--black);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--black);
+  border-color: var(--black);
+}
+.btn--outline:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.btn--ghost {
+  background: transparent;
+  color: inherit;
+  border-color: currentColor;
+  padding: 12px 22px;
+}
+.btn--ghost:hover {
+  background: currentColor;
+}
+.header.is-solid .btn--ghost:hover {
+  color: var(--white);
+}
+.btn--full {
+  width: 100%;
+}
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-h);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  transition: background 0.45s var(--ease), color 0.45s var(--ease),
+    box-shadow 0.45s var(--ease), height 0.45s var(--ease);
+}
+.header.is-solid {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  color: var(--c-111);
+  box-shadow: 0 1px 0 var(--line-dark);
+  height: 64px;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+.brand__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid currentColor;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  border-radius: 50%;
+}
+.brand__name {
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+}
+.nav__list {
+  display: flex;
+  gap: 34px;
+}
+.nav__link {
+  position: relative;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 6px 0;
+  opacity: 0.85;
+  transition: opacity 0.3s var(--ease);
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.nav__link:hover,
+.nav__link.is-active {
+  opacity: 1;
+}
+.nav__link:hover::after,
+.nav__link.is-active::after {
+  transform: scaleX(1);
+}
+.header__cta {
+  font-size: 0.72rem;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.hamburger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.4s var(--ease), opacity 0.3s var(--ease), top 0.3s var(--ease);
+}
+.hamburger span:nth-child(1) { top: 16px; }
+.hamburger span:nth-child(2) { top: 22px; }
+.hamburger span:nth-child(3) { top: 28px; }
+.hamburger.is-open span:nth-child(1) { top: 22px; transform: rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { top: 22px; transform: rotate(-45deg); }
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  color: var(--white);
+  z-index: 99;
+  display: grid;
+  place-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.6s var(--ease);
+  visibility: hidden;
+}
+.mobile-menu.is-open {
+  transform: translateY(0);
+  visibility: visible;
+}
+.mobile-menu ul {
+  text-align: center;
+}
+.mobile-menu__link {
+  display: block;
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding: 14px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), color 0.3s;
+}
+.mobile-menu.is-open .mobile-menu__link {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-menu.is-open li:nth-child(1) .mobile-menu__link { transition-delay: 0.1s; }
+.mobile-menu.is-open li:nth-child(2) .mobile-menu__link { transition-delay: 0.16s; }
+.mobile-menu.is-open li:nth-child(3) .mobile-menu__link { transition-delay: 0.22s; }
+.mobile-menu.is-open li:nth-child(4) .mobile-menu__link { transition-delay: 0.28s; }
+.mobile-menu.is-open li:nth-child(5) .mobile-menu__link { transition-delay: 0.34s; }
+.mobile-menu__link:hover { color: var(--gold); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  color: var(--white);
+  overflow: hidden;
+}
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.hero__grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.06), transparent 60%),
+    radial-gradient(80% 60% at 80% 100%, rgba(255, 255, 255, 0.05), transparent 55%);
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  padding-top: var(--header-h);
+  max-width: 1000px;
+}
+.hero__eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hero__eyebrow::before {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero__title {
+  font-size: clamp(2.4rem, 6.4vw, 5.6rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+}
+.hero__subtitle {
+  margin-top: 30px;
+  max-width: 56ch;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 300;
+}
+.hero__actions {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.hero__actions .btn--solid {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+.hero__actions .btn--solid:hover {
+  background: transparent;
+  color: var(--white);
+}
+.hero__actions .btn--outline {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.hero__actions .btn--outline:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+.hero__scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.hero__scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2.4s var(--ease) infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleY(0.4); opacity: 0.4; transform-origin: top; }
+  50% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee {
+  background: var(--black);
+  color: var(--white);
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+.marquee__group {
+  display: flex;
+  align-items: center;
+}
+.marquee__group span {
+  font-size: clamp(1.1rem, 2.4vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 26px;
+  color: rgba(255, 255, 255, 0.92);
+}
+.marquee .sep {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 1rem;
+  transform: translateY(-2px);
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============================================================
+   SECTIONS (shared)
+   ============================================================ */
+.section {
+  padding: clamp(80px, 12vw, 160px) 0;
+}
+.section--dark {
+  background: var(--black);
+  color: var(--white);
+}
+.section__head {
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+.section__index {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.section__title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+.section__sub {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: var(--gray-2);
+  font-weight: 300;
+  max-width: 56ch;
+}
+.section--dark .section__sub {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+.about__summary {
+  font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+  line-height: 1.45;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--c-111);
+}
+.about__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 40px;
+}
+.about__roles li {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid var(--line-dark);
+  border-radius: 50px;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.about__roles li:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.about__cols {
+  display: grid;
+  gap: 36px;
+}
+.about__block {
+  padding-top: 28px;
+  border-top: 1px solid var(--line-dark);
+}
+.about__block-title {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  margin-bottom: 18px;
+}
+.about__list li {
+  font-size: 1.02rem;
+  padding: 7px 0;
+  font-weight: 400;
+}
+.about__list li::before {
+  content: "—";
+  color: var(--gold);
+  margin-right: 12px;
+}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.service {
+  position: relative;
+  padding: 48px 40px 56px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  transition: background 0.5s var(--ease);
+}
+.service::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+.service:hover {
+  background: var(--c-1a);
+}
+.service:hover::after {
+  transform: scaleX(1);
+}
+.service__num {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.service__title {
+  font-size: 1.5rem;
+  margin: 26px 0 14px;
+  transition: transform 0.5s var(--ease);
+}
+.service:hover .service__title {
+  transform: translateX(8px);
+}
+.service__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  font-size: 0.98rem;
+}
+
+/* ============================================================
+   PORTFOLIO
+   ============================================================ */
+.portfolio__grid {
+  columns: 3;
+  column-gap: 26px;
+}
+.pcard {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 26px;
+  background: var(--c-f5);
+  border: 1px solid var(--line-dark);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.pcard.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pcard__media {
+  position: relative;
+  overflow: hidden;
+  background: var(--c-1a);
+}
+.pcard__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  transform: scale(1.02);
+  transition: transform 0.7s var(--ease), filter 0.7s var(--ease);
+  filter: grayscale(100%) contrast(1.02);
+}
+.pcard:hover .pcard__img {
+  transform: scale(1.08);
+  filter: grayscale(0%);
+}
+.pcard__fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  color: #fff;
+  background:
+    radial-gradient(120% 120% at 30% 20%, #2a2a2a, #0a0a0a);
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.pcard__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.15) 55%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+.pcard:hover .pcard__overlay,
+.pcard:focus-within .pcard__overlay {
+  opacity: 1;
+}
+.pcard__visit {
+  color: #fff;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: translateY(14px);
+  transition: transform 0.5s var(--ease), background 0.3s, color 0.3s;
+}
+.pcard:hover .pcard__visit {
+  transform: translateY(0);
+}
+.pcard__visit:hover {
+  background: #fff;
+  color: #000;
+}
+.pcard__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+}
+.pcard__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.pcard__tag {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  white-space: nowrap;
+  border: 1px solid var(--line-dark);
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+/* ============================================================
+   METRICS
+   ============================================================ */
+.metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-top: 1px solid var(--line);
+  padding-top: 60px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.metric__num {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.metric__label {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.metrics__points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  margin-top: 70px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+.metrics__points li {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+.metrics__points li::before {
+  content: "\2726";
+  color: var(--gold);
+  margin-right: 12px;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+.contact__text {
+  margin-top: 24px;
+  color: var(--gray-2);
+  font-size: 1.05rem;
+  font-weight: 300;
+  max-width: 44ch;
+}
+.contact__details {
+  margin-top: 44px;
+  display: grid;
+  gap: 18px;
+}
+.contact__details li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-dark);
+  font-size: 1rem;
+}
+.contact__details span {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+}
+.contact__details a:hover {
+  color: var(--gold);
+}
+
+.contact__form {
+  display: grid;
+  gap: 22px;
+}
+.field {
+  display: grid;
+  gap: 8px;
+}
+.field label {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+}
+.field input,
+.field textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--c-111);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line-dark);
+  padding: 12px 2px;
+  transition: border-color 0.4s var(--ease);
+  resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #b5b5b5;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--black);
+}
+.form__note {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.form__note.ok { color: #1d8a4a; }
+.form__note.err { color: #c0392b; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding-top: 90px;
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--line);
+}
+.footer__brand h3 {
+  font-size: 1.6rem;
+  margin: 18px 0 6px;
+}
+.footer__brand p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+.footer__nav h4,
+.footer__social h4 {
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+.footer__nav li,
+.footer__social li {
+  margin-bottom: 12px;
+}
+.footer__nav a,
+.footer__social a {
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.3s, padding-left 0.3s var(--ease);
+}
+.footer__nav a:hover,
+.footer__social a:hover {
+  color: #fff;
+  padding-left: 6px;
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0 40px;
+  font-size: 0.84rem;
+  color: var(--gray);
+}
+.footer__top {
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s;
+}
+.footer__top:hover {
+  color: var(--gold);
+}
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+.whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  transition: transform 0.4s var(--ease);
+}
+.whatsapp:hover {
+  transform: scale(1.08) translateY(-2px);
+}
+.whatsapp svg {
+  position: relative;
+  z-index: 2;
+}
+.whatsapp__pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  animation: pulse 2.2s var(--ease) infinite;
+  z-index: 1;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  70% { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+/* ============================================================
+   REVEAL ANIMATION
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio__grid { columns: 2; }
+  .metrics__grid { grid-template-columns: repeat(2, 1fr); row-gap: 50px; }
+}
+
+@media (max-width: 860px) {
+  .nav,
+  .header__cta { display: none; }
+  .hamburger { display: block; }
+
+  .about__grid { grid-template-columns: 1fr; gap: 50px; }
+  .contact__inner { grid-template-columns: 1fr; gap: 50px; }
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+  .footer__brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 22px; }
+  .services__grid { grid-template-columns: 1fr; }
+  .portfolio__grid { columns: 1; }
+  .metrics__grid { grid-template-columns: 1fr 1fr; }
+  .hero__actions .btn { flex: 1; }
+  .contact__details li { grid-template-columns: 1fr; gap: 4px; }
+  .footer__inner { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 380px) {
+  .metrics__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .pcard { opacity: 1; transform: none; }
+  .marquee__track { animation: none; }
+}
+
+</style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sherwin Galindo",
+    "jobTitle": "Website Developer & Designer",
+    "email": "mailto:sherwingalindo18@gmail.com",
+    "url": "https://sherwingalindo.com/",
+    "description": "Passionate and experienced website designer with over four years of expertise in creating visually stunning and highly functional websites.",
+    "knowsAbout": ["Web Design", "Web Development", "HTML", "CSS", "JavaScript", "UI/UX Design", "SEO Optimization", "Landing Pages", "E-Commerce"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Maintenance" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Websites" } }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Sherwin Galindo — Home">
+        <span class="brand__mark">SG</span>
+        <span class="brand__name">Sherwin Galindo</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--ghost header__cta">Let's Talk</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#home" class="mobile-menu__link">Home</a></li>
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#services" class="mobile-menu__link">Services</a></li>
+        <li><a href="#portfolio" class="mobile-menu__link">Portfolio</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Website Developer &amp; Designer</p>
+        <h1 class="hero__title reveal">
+          Creating High-Converting Websites That Help Businesses Grow
+        </h1>
+        <p class="hero__subtitle reveal">
+          Professional Website Design, Development, and Digital Experiences Built for
+          Performance, Branding, and Results.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#portfolio" class="btn btn--solid">View Portfolio</a>
+          <a href="#contact" class="btn btn--outline">Contact Me</a>
+        </div>
+      </div>
+      <a href="#marquee" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <section class="marquee" id="marquee" aria-label="Skills">
+      <div class="marquee__track">
+        <div class="marquee__group" aria-hidden="false">
+          <span>Custom Website Development</span><i class="sep">&#10022;</i>
+          <span>Responsive Design</span><i class="sep">&#10022;</i>
+          <span>HTML</span><i class="sep">&#10022;</i>
+          <span>CSS</span><i class="sep">&#10022;</i>
+          <span>JavaScript</span><i class="sep">&#10022;</i>
+          <span>SEO Optimization</span><i class="sep">&#10022;</i>
+          <span>UI/UX Design</span><i class="sep">&#10022;</i>
+          <span>Website Speed Optimization</span><i class="sep">&#10022;</i>
+          <span>Business Websites</span><i class="sep">&#10022;</i>
+          <span>Landing Pages</span><i class="sep">&#10022;</i>
+          <span>E-Commerce</span><i class="sep">&#10022;</i>
+          <span>Website Maintenance</span><i class="sep">&#10022;</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Custom Website Development</span><i class="sep">&#10022;</i>
+          <span>Responsive Design</span><i class="sep">&#10022;</i>
+          <span>HTML</span><i class="sep">&#10022;</i>
+          <span>CSS</span><i class="sep">&#10022;</i>
+          <span>JavaScript</span><i class="sep">&#10022;</i>
+          <span>SEO Optimization</span><i class="sep">&#10022;</i>
+          <span>UI/UX Design</span><i class="sep">&#10022;</i>
+          <span>Website Speed Optimization</span><i class="sep">&#10022;</i>
+          <span>Business Websites</span><i class="sep">&#10022;</i>
+          <span>Landing Pages</span><i class="sep">&#10022;</i>
+          <span>E-Commerce</span><i class="sep">&#10022;</i>
+          <span>Website Maintenance</span><i class="sep">&#10022;</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">01</span>
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__lead reveal">
+            <p class="about__summary">
+              I am a passionate and experienced website designer with over four years of
+              expertise in creating visually stunning and highly functional websites. I am
+              driven by a love for innovation and a dedication to excellence, specializing in
+              delivering high-quality, user-friendly, and responsive digital solutions that
+              empower businesses to succeed online.
+            </p>
+
+            <ul class="about__roles" aria-label="Roles">
+              <li>Website Developer</li>
+              <li>Frontend Developer</li>
+              <li>UI/UX Enthusiast</li>
+              <li>Digital Solutions Creator</li>
+            </ul>
+          </div>
+
+          <div class="about__cols">
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Skills</h3>
+              <ul class="about__list">
+                <li>HTML5 &amp; Semantic Markup</li>
+                <li>CSS3 &amp; Modern Layouts</li>
+                <li>Vanilla JavaScript</li>
+                <li>Responsive &amp; Mobile-First Design</li>
+                <li>UI/UX &amp; Visual Design</li>
+                <li>SEO &amp; Performance Optimization</li>
+              </ul>
+            </div>
+
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Experience</h3>
+              <ul class="about__list">
+                <li>4+ years building business websites</li>
+                <li>30+ live projects across industries</li>
+                <li>Restaurants, retail &amp; local brands</li>
+                <li>End-to-end design &amp; development</li>
+              </ul>
+            </div>
+
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Education</h3>
+              <ul class="about__list">
+                <li>Studies in Information Technology</li>
+                <li>Continuous self-driven learning</li>
+                <li>Modern web standards &amp; tooling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="services section section--dark" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">02</span>
+          <h2 class="section__title">Services</h2>
+          <p class="section__sub">Everything your business needs to launch and grow online.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service reveal">
+            <span class="service__num">01</span>
+            <h3 class="service__title">Website Design</h3>
+            <p class="service__text">Custom modern website designs focused on user experience and conversion.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">02</span>
+            <h3 class="service__title">Website Development</h3>
+            <p class="service__text">Fast, responsive, and scalable websites built with clean code.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">03</span>
+            <h3 class="service__title">Landing Pages</h3>
+            <p class="service__text">Conversion-focused landing pages for marketing campaigns.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">04</span>
+            <h3 class="service__title">Website Maintenance</h3>
+            <p class="service__text">Updates, support, security monitoring, and optimization.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">05</span>
+            <h3 class="service__title">SEO Optimization</h3>
+            <p class="service__text">Improve rankings, speed, and search visibility.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">06</span>
+            <h3 class="service__title">Business Websites</h3>
+            <p class="service__text">Professional websites tailored for local businesses and brands.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO ================= -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Selected Projects</h2>
+          <p class="section__sub">
+            A collection of websites designed and developed for businesses across multiple industries.
+          </p>
+        </div>
+
+        <div class="portfolio__grid" id="portfolioGrid">
+          <!-- Cards injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY / METRICS ================= -->
+    <section class="metrics section section--dark" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Why Work With Me</h2>
+        </div>
+
+        <div class="metrics__grid">
+          <div class="metric reveal">
+            <span class="metric__num" data-count="30" data-suffix="+">0</span>
+            <span class="metric__label">Business Websites</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="100" data-suffix="%">0</span>
+            <span class="metric__label">Responsive Designs</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="4" data-suffix="+ yrs">0</span>
+            <span class="metric__label">Industry Experience</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="100" data-suffix="%">0</span>
+            <span class="metric__label">SEO Friendly Builds</span>
+          </div>
+        </div>
+
+        <ul class="metrics__points reveal">
+          <li>Fast Loading Performance</li>
+          <li>SEO Friendly Development</li>
+          <li>Clean, Maintainable Code</li>
+          <li>Conversion-Focused Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__intro reveal">
+          <span class="section__index">05</span>
+          <h2 class="section__title">Let's Build Something<br />Exceptional</h2>
+          <p class="contact__text">
+            Have a project in mind? Tell me about your business and goals — I'll get back to
+            you with a tailored plan.
+          </p>
+          <ul class="contact__details">
+            <li><span>Email</span><a href="mailto:sherwingalindo18@gmail.com">sherwingalindo18@gmail.com</a></li>
+            <li><span>WhatsApp</span><a href="https://wa.me/639282179879" target="_blank" rel="noopener">+63 928 217 9879</a></li>
+            <li><span>Availability</span>Open for new projects</li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm"
+              action="https://formsubmit.co/sherwingalindo18@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Website Inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+1 555 000 0000" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid btn--full">Submit Inquiry</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">SG</span>
+        <h3>Sherwin Galindo</h3>
+        <p>Website Developer</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:sherwingalindo18@gmail.com">Email</a></li>
+          <li><a href="https://wa.me/639282179879" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#" aria-label="LinkedIn (placeholder)">LinkedIn</a></li>
+          <li><a href="#" aria-label="Instagram (placeholder)">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Sherwin Galindo. All Rights Reserved.</p>
+      <button class="footer__top" id="toTop" aria-label="Back to top">Back to top &#8593;</button>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLOATING ================= -->
+  <a class="whatsapp" href="https://wa.me/639282179879" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M16.04 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.46 1.73 6.4L3.2 28.8l6.56-1.72a12.74 12.74 0 0 0 6.28 1.64h.01c7.06 0 12.8-5.73 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06A12.7 12.7 0 0 0 16.04 3.2Zm0 23.04h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.02 1.05 1.07-3.92-.25-.4a10.58 10.58 0 0 1-1.62-5.66c0-5.86 4.77-10.62 10.63-10.62 2.84 0 5.5 1.1 7.51 3.11a10.55 10.55 0 0 1 3.11 7.52c0 5.86-4.77 10.63-10.62 10.63Zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65 0 1.56 1.14 3.07 1.3 3.28.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.74.27-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+    <span class="whatsapp__pulse" aria-hidden="true"></span>
+  </a>
+
+  <script>
+/* ============================================================
+   Sherwin Galindo — Portfolio interactions
+   Vanilla JavaScript only. No dependencies.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  var prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  /* ----------------------------------------------------------
+     1. HEADER — solid on scroll
+  ---------------------------------------------------------- */
+  var header = document.getElementById("header");
+  function onScrollHeader() {
+    if (window.scrollY > 40) header.classList.add("is-solid");
+    else header.classList.remove("is-solid");
+  }
+  onScrollHeader();
+  window.addEventListener("scroll", onScrollHeader, { passive: true });
+
+  /* ----------------------------------------------------------
+     2. MOBILE MENU
+  ---------------------------------------------------------- */
+  var hamburger = document.getElementById("hamburger");
+  var mobileMenu = document.getElementById("mobileMenu");
+
+  function toggleMenu(open) {
+    var willOpen =
+      typeof open === "boolean" ? open : !mobileMenu.classList.contains("is-open");
+    mobileMenu.classList.toggle("is-open", willOpen);
+    hamburger.classList.toggle("is-open", willOpen);
+    hamburger.setAttribute("aria-expanded", String(willOpen));
+    mobileMenu.setAttribute("aria-hidden", String(!willOpen));
+    document.body.style.overflow = willOpen ? "hidden" : "";
+  }
+  hamburger.addEventListener("click", function () {
+    toggleMenu();
+  });
+  Array.prototype.forEach.call(
+    document.querySelectorAll(".mobile-menu__link"),
+    function (link) {
+      link.addEventListener("click", function () {
+        toggleMenu(false);
+      });
+    }
+  );
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") toggleMenu(false);
+  });
+
+  /* ----------------------------------------------------------
+     3. SMOOTH ANCHOR SCROLL (with header offset)
+  ---------------------------------------------------------- */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('a[href^="#"]'),
+    function (anchor) {
+      anchor.addEventListener("click", function (e) {
+        var id = this.getAttribute("href");
+        if (id === "#" || id.length < 2) return;
+        var target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        var offset = 64;
+        var top =
+          target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({
+          top: top,
+          behavior: prefersReduced ? "auto" : "smooth"
+        });
+      });
+    }
+  );
+
+  var toTop = document.getElementById("toTop");
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     4. PORTFOLIO — build cards + auto thumbnails
+  ---------------------------------------------------------- */
+  var projects = [
+    { name: "86 West", url: "https://the86west.com/", tag: "Restaurant" },
+    { name: "Digital One Reviews", url: "https://digitalonereviews.com/", tag: "SaaS" },
+    { name: "Danielson Land Co", url: "https://danielsonlandco.com/", tag: "Real Estate" },
+    { name: "Geerlings Garden Center", url: "http://geerlingsgardencenter.com/", tag: "Retail" },
+    { name: "Pack 'N' Mail", url: "https://packnmailttx.com/", tag: "Services" },
+    { name: "Waterside Cafe & Diner", url: "https://watersidecafeanddiner.com/", tag: "Restaurant" },
+    { name: "Jamison Carpets", url: "https://jamisoncarpets.com/", tag: "Retail" },
+    { name: "Salon Anna Noelle", url: "https://salonannanoelle.com/", tag: "Beauty" },
+    { name: "Amalio's Pizza & Pasta", url: "https://amaliospizzaandpasta.com/", tag: "Restaurant" },
+    { name: "Adagio Seafood", url: "https://seafoodadagio.com/", tag: "Restaurant" },
+    { name: "Weinrich Bakery", url: "https://weinrichbakery.com/", tag: "Bakery" },
+    { name: "Steve Stein's Famous Deli", url: "https://steinsfamousdeli.com/", tag: "Restaurant" },
+    { name: "Dagwood's Pub", url: "https://dagwoodspub.com/", tag: "Pub" },
+    { name: "The Borough Pub", url: "https://theboroughpub.com/", tag: "Pub" },
+    { name: "Bailey's Bar & Grille", url: "https://baileysbarandgrillpa.com/", tag: "Bar & Grill" },
+    { name: "Farmhouse Tavern", url: "https://farmhousetavern.com/", tag: "Tavern" },
+    { name: "Buona Via", url: "https://buonavia.com/", tag: "Restaurant" },
+    { name: "HG Bucks Bagels", url: "https://hgbucksbagels.com/", tag: "Bakery" },
+    { name: "Nico's Pizza Jamison", url: "https://nicospizzajamison.com/", tag: "Restaurant" },
+    { name: "Jamison Pour House", url: "https://jamisonpourhouse.com/", tag: "Pub" },
+    { name: "Roots Restaurants", url: "https://rootsrestaurants.com/", tag: "Restaurant" },
+    { name: "New Britain Inn", url: "https://newbritaininn.com/", tag: "Hospitality" },
+    { name: "Station Taphouse", url: "https://thestationtaphouse.com/", tag: "Tavern" },
+    { name: "Taormina's Ivyland", url: "https://taorminasivyland.com/", tag: "Restaurant" },
+    { name: "Crossroads Tavern", url: "https://xroadstavern.com/", tag: "Tavern" },
+    { name: "Oneals Pub", url: "https://onealspub.com/", tag: "Pub" },
+    { name: "Whiskey Girl Saloon", url: "https://thewhiskeygirlsaloon.com/", tag: "Bar" },
+    { name: "Pocos", url: "https://pocos.com/", tag: "Restaurant" },
+    { name: "Patriot Landscaping", url: "https://patriotlandscapenh.com/", tag: "Landscaping" },
+    { name: "Tex Mex Connection", url: "https://texmexconnection.com/", tag: "Restaurant" }
+  ];
+
+  function initials(name) {
+    return name
+      .replace(/[^a-zA-Z0-9 ]/g, "")
+      .split(" ")
+      .filter(Boolean)
+      .slice(0, 2)
+      .map(function (w) {
+        return w.charAt(0).toUpperCase();
+      })
+      .join("");
+  }
+
+  function thumbUrl(url) {
+    // WordPress mShots — free, keyless screenshot service. Generates a
+    // preview image directly from the live site URL.
+    return (
+      "https://s0.wp.com/mshots/v1/" +
+      encodeURIComponent(url) +
+      "?w=800&h=600"
+    );
+  }
+
+  var grid = document.getElementById("portfolioGrid");
+  var cards = [];
+
+  if (grid) {
+    var frag = document.createDocumentFragment();
+
+    projects.forEach(function (p) {
+      var card = document.createElement("article");
+      card.className = "pcard";
+
+      var fallback =
+        '<div class="pcard__fallback" aria-hidden="true">' +
+        initials(p.name) +
+        "</div>";
+
+      card.innerHTML =
+        '<div class="pcard__media">' +
+        '<img class="pcard__img" loading="lazy" decoding="async" width="800" height="600"' +
+        ' alt="' +
+        p.name +
+        " website preview\" src=\"" +
+        thumbUrl(p.url) +
+        '" />' +
+        '<div class="pcard__overlay">' +
+        '<a class="pcard__visit" href="' +
+        p.url +
+        '" target="_blank" rel="noopener noreferrer">Visit Website &#8599;</a>' +
+        "</div>" +
+        "</div>" +
+        '<div class="pcard__body">' +
+        '<h3 class="pcard__name">' +
+        p.name +
+        "</h3>" +
+        '<span class="pcard__tag">' +
+        p.tag +
+        "</span>" +
+        "</div>";
+
+      // Graceful fallback if the screenshot fails to load
+      var img = card.querySelector(".pcard__img");
+      img.addEventListener("error", function handleErr() {
+        var media = card.querySelector(".pcard__media");
+        var overlay = card.querySelector(".pcard__overlay");
+        img.remove();
+        media.insertAdjacentHTML("afterbegin", fallback);
+        if (overlay) media.appendChild(overlay);
+      });
+
+      frag.appendChild(card);
+      cards.push(card);
+    });
+
+    grid.appendChild(frag);
+  }
+
+  /* ----------------------------------------------------------
+     5. SCROLL REVEAL (IntersectionObserver)
+  ---------------------------------------------------------- */
+  function revealAll(nodes) {
+    Array.prototype.forEach.call(nodes, function (n) {
+      n.classList.add("is-in");
+    });
+  }
+
+  var revealTargets = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window && !prefersReduced) {
+    var revObserver = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
+    Array.prototype.forEach.call(revealTargets, function (t) {
+      revObserver.observe(t);
+    });
+
+    // Portfolio cards — staggered entrance
+    var cardObserver = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var delay =
+              (Array.prototype.indexOf.call(cards, el) % 3) * 90;
+            setTimeout(function () {
+              el.classList.add("is-in");
+            }, delay);
+            obs.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    cards.forEach(function (c) {
+      cardObserver.observe(c);
+    });
+  } else {
+    revealAll(revealTargets);
+    revealAll(cards);
+  }
+
+  /* ----------------------------------------------------------
+     6. COUNTERS
+  ---------------------------------------------------------- */
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    var suffix = el.getAttribute("data-suffix") || "";
+    if (prefersReduced) {
+      el.textContent = target + suffix;
+      return;
+    }
+    var duration = 1600;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      // easeOutExpo
+      var eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      el.textContent = Math.round(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counters = document.querySelectorAll(".metric__num");
+  if ("IntersectionObserver" in window) {
+    var countObserver = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    Array.prototype.forEach.call(counters, function (c) {
+      countObserver.observe(c);
+    });
+  } else {
+    Array.prototype.forEach.call(counters, animateCounter);
+  }
+
+  /* ----------------------------------------------------------
+     7. ACTIVE NAV LINK ON SCROLL
+  ---------------------------------------------------------- */
+  var sections = ["home", "about", "services", "portfolio", "contact"]
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+  var navLinks = document.querySelectorAll(".nav__link");
+
+  if ("IntersectionObserver" in window) {
+    var navObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            Array.prototype.forEach.call(navLinks, function (link) {
+              link.classList.toggle(
+                "is-active",
+                link.getAttribute("href") === "#" + id
+              );
+            });
+          }
+        });
+      },
+      { threshold: 0.5, rootMargin: "-20% 0px -40% 0px" }
+    );
+    sections.forEach(function (s) {
+      navObserver.observe(s);
+    });
+  }
+
+  /* ----------------------------------------------------------
+     8. HERO ANIMATED BACKGROUND (canvas particles + links)
+  ---------------------------------------------------------- */
+  var canvas = document.getElementById("heroCanvas");
+  if (canvas && !prefersReduced) {
+    var ctx = canvas.getContext("2d");
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w, h;
+    var particles = [];
+    var mouse = { x: -9999, y: -9999 };
+    var rafId = null;
+
+    function resize() {
+      w = canvas.offsetWidth;
+      h = canvas.offsetHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      buildParticles();
+    }
+
+    function buildParticles() {
+      var count = Math.min(Math.floor((w * h) / 16000), 90);
+      particles = [];
+      for (var i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: Math.random() * 1.6 + 0.4
+        });
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+
+        // mouse parallax attraction
+        var dxm = mouse.x - p.x;
+        var dym = mouse.y - p.y;
+        var dm = Math.sqrt(dxm * dxm + dym * dym);
+        if (dm < 140) {
+          p.x -= dxm * 0.002;
+          p.y -= dym * 0.002;
+        }
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255,255,255,0.55)";
+        ctx.fill();
+
+        for (var j = i + 1; j < particles.length; j++) {
+          var q = particles[j];
+          var dx = p.x - q.x;
+          var dy = p.y - q.y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = "rgba(255,255,255," + (0.12 * (1 - dist / 120)) + ")";
+            ctx.lineWidth = 0.6;
+            ctx.stroke();
+          }
+        }
+      }
+      rafId = requestAnimationFrame(draw);
+    }
+
+    function start() {
+      if (!rafId) draw();
+    }
+    function stop() {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    }
+
+    window.addEventListener(
+      "mousemove",
+      function (e) {
+        var rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      },
+      { passive: true }
+    );
+    window.addEventListener("mouseout", function () {
+      mouse.x = -9999;
+      mouse.y = -9999;
+    });
+
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resize, 200);
+    });
+
+    // Pause when hero is offscreen to save CPU
+    if ("IntersectionObserver" in window) {
+      var heroObs = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start();
+            else stop();
+          });
+        },
+        { threshold: 0 }
+      );
+      heroObs.observe(canvas);
+    }
+
+    resize();
+    start();
+  }
+
+  /* ----------------------------------------------------------
+     9. CONTACT FORM — AJAX submit via FormSubmit
+  ---------------------------------------------------------- */
+  var form = document.getElementById("contactForm");
+  var note = document.getElementById("formNote");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      // Honeypot check
+      if (form.querySelector('[name="_honey"]').value) {
+        e.preventDefault();
+        return;
+      }
+
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+      note.textContent = "";
+      note.className = "form__note";
+
+      var data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            note.textContent =
+              "Thank you. Your inquiry has been sent — I'll reply shortly.";
+            note.className = "form__note ok";
+          } else {
+            return res.json().then(function (d) {
+              throw new Error((d && d.message) || "Submission failed");
+            });
+          }
+        })
+        .catch(function () {
+          note.textContent =
+            "Something went wrong. Please email sherwingalindo18@gmail.com directly.";
+          note.className = "form__note err";
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = original;
+        });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     10. YEAR (footer safety — keeps copyright current if needed)
+  ---------------------------------------------------------- */
+  // Static 2026 per brief; no dynamic override required.
+})();
+
+</script>
+</body>
+</html>
