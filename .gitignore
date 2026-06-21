@@ -1,3 +1,7 @@
 # Build / distribution artifacts (generated, not source)
 dist/
 *.zip
+
+# GitHub Pages custom-domain file — kept out so it doesn't override the
+# github.io preview deployment. Included in the Bluehost zip instead.
+CNAME
