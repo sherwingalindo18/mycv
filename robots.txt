@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sherwingalindo18.github.io/mycv/sitemap.xml
