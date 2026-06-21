@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+
+  <title>Sherwin Galindo — Website Developer &amp; Designer</title>
+  <meta name="description" content="Sherwin Galindo is a professional website developer and designer creating high-converting, responsive websites for businesses. Custom web design, development, landing pages, SEO, and maintenance." />
+  <meta name="author" content="Sherwin Galindo" />
+  <meta name="keywords" content="Website Developer, Web Designer, Frontend Developer, UI/UX, Landing Pages, SEO, Business Websites, Sherwin Galindo" />
+  <link rel="canonical" href="https://sherwingalindo.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sherwin Galindo — Website Developer &amp; Designer" />
+  <meta property="og:description" content="Creating high-converting websites that help businesses grow. Professional web design, development, and digital experiences built for performance, branding, and results." />
+  <meta property="og:url" content="https://sherwingalindo.com/" />
+  <meta property="og:site_name" content="Sherwin Galindo" />
+  <meta property="og:image" content="https://s0.wp.com/mshots/v1/https%3A%2F%2Fthe86west.com%2F?w=1200&h=630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sherwin Galindo — Website Developer &amp; Designer" />
+  <meta name="twitter:description" content="Creating high-converting websites that help businesses grow." />
+
+  <!-- Preconnect for thumbnail service -->
+  <link rel="preconnect" href="https://s0.wp.com" crossorigin />
+
+  <!-- Fonts: system-first stack handled in CSS; no blocking external font requests -->
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sherwin Galindo",
+    "jobTitle": "Website Developer & Designer",
+    "email": "mailto:sherwingalindo18@gmail.com",
+    "url": "https://sherwingalindo.com/",
+    "description": "Passionate and experienced website designer with over four years of expertise in creating visually stunning and highly functional websites.",
+    "knowsAbout": ["Web Design", "Web Development", "HTML", "CSS", "JavaScript", "UI/UX Design", "SEO Optimization", "Landing Pages", "E-Commerce"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Maintenance" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Websites" } }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Sherwin Galindo — Home">
+        <span class="brand__mark">SG</span>
+        <span class="brand__name">Sherwin Galindo</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#services">Services</a></li>
+          <li><a class="nav__link" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--ghost header__cta">Let's Talk</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#home" class="mobile-menu__link">Home</a></li>
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#services" class="mobile-menu__link">Services</a></li>
+        <li><a href="#portfolio" class="mobile-menu__link">Portfolio</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Website Developer &amp; Designer</p>
+        <h1 class="hero__title reveal">
+          Creating High-Converting Websites That Help Businesses Grow
+        </h1>
+        <p class="hero__subtitle reveal">
+          Professional Website Design, Development, and Digital Experiences Built for
+          Performance, Branding, and Results.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#portfolio" class="btn btn--solid">View Portfolio</a>
+          <a href="#contact" class="btn btn--outline">Contact Me</a>
+        </div>
+      </div>
+      <a href="#marquee" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <section class="marquee" id="marquee" aria-label="Skills">
+      <div class="marquee__track">
+        <div class="marquee__group" aria-hidden="false">
+          <span>Custom Website Development</span><i class="sep">&#10022;</i>
+          <span>Responsive Design</span><i class="sep">&#10022;</i>
+          <span>HTML</span><i class="sep">&#10022;</i>
+          <span>CSS</span><i class="sep">&#10022;</i>
+          <span>JavaScript</span><i class="sep">&#10022;</i>
+          <span>SEO Optimization</span><i class="sep">&#10022;</i>
+          <span>UI/UX Design</span><i class="sep">&#10022;</i>
+          <span>Website Speed Optimization</span><i class="sep">&#10022;</i>
+          <span>Business Websites</span><i class="sep">&#10022;</i>
+          <span>Landing Pages</span><i class="sep">&#10022;</i>
+          <span>E-Commerce</span><i class="sep">&#10022;</i>
+          <span>Website Maintenance</span><i class="sep">&#10022;</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Custom Website Development</span><i class="sep">&#10022;</i>
+          <span>Responsive Design</span><i class="sep">&#10022;</i>
+          <span>HTML</span><i class="sep">&#10022;</i>
+          <span>CSS</span><i class="sep">&#10022;</i>
+          <span>JavaScript</span><i class="sep">&#10022;</i>
+          <span>SEO Optimization</span><i class="sep">&#10022;</i>
+          <span>UI/UX Design</span><i class="sep">&#10022;</i>
+          <span>Website Speed Optimization</span><i class="sep">&#10022;</i>
+          <span>Business Websites</span><i class="sep">&#10022;</i>
+          <span>Landing Pages</span><i class="sep">&#10022;</i>
+          <span>E-Commerce</span><i class="sep">&#10022;</i>
+          <span>Website Maintenance</span><i class="sep">&#10022;</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">01</span>
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__lead reveal">
+            <p class="about__summary">
+              I am a passionate and experienced website designer with over four years of
+              expertise in creating visually stunning and highly functional websites. I am
+              driven by a love for innovation and a dedication to excellence, specializing in
+              delivering high-quality, user-friendly, and responsive digital solutions that
+              empower businesses to succeed online.
+            </p>
+
+            <ul class="about__roles" aria-label="Roles">
+              <li>Website Developer</li>
+              <li>Frontend Developer</li>
+              <li>UI/UX Enthusiast</li>
+              <li>Digital Solutions Creator</li>
+            </ul>
+          </div>
+
+          <div class="about__cols">
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Skills</h3>
+              <ul class="about__list">
+                <li>HTML5 &amp; Semantic Markup</li>
+                <li>CSS3 &amp; Modern Layouts</li>
+                <li>Vanilla JavaScript</li>
+                <li>Responsive &amp; Mobile-First Design</li>
+                <li>UI/UX &amp; Visual Design</li>
+                <li>SEO &amp; Performance Optimization</li>
+              </ul>
+            </div>
+
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Experience</h3>
+              <ul class="about__list">
+                <li>4+ years building business websites</li>
+                <li>30+ live projects across industries</li>
+                <li>Restaurants, retail &amp; local brands</li>
+                <li>End-to-end design &amp; development</li>
+              </ul>
+            </div>
+
+            <div class="about__block reveal">
+              <h3 class="about__block-title">Education</h3>
+              <ul class="about__list">
+                <li>Studies in Information Technology</li>
+                <li>Continuous self-driven learning</li>
+                <li>Modern web standards &amp; tooling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="services section section--dark" id="services">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">02</span>
+          <h2 class="section__title">Services</h2>
+          <p class="section__sub">Everything your business needs to launch and grow online.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service reveal">
+            <span class="service__num">01</span>
+            <h3 class="service__title">Website Design</h3>
+            <p class="service__text">Custom modern website designs focused on user experience and conversion.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">02</span>
+            <h3 class="service__title">Website Development</h3>
+            <p class="service__text">Fast, responsive, and scalable websites built with clean code.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">03</span>
+            <h3 class="service__title">Landing Pages</h3>
+            <p class="service__text">Conversion-focused landing pages for marketing campaigns.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">04</span>
+            <h3 class="service__title">Website Maintenance</h3>
+            <p class="service__text">Updates, support, security monitoring, and optimization.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">05</span>
+            <h3 class="service__title">SEO Optimization</h3>
+            <p class="service__text">Improve rankings, speed, and search visibility.</p>
+          </article>
+          <article class="service reveal">
+            <span class="service__num">06</span>
+            <h3 class="service__title">Business Websites</h3>
+            <p class="service__text">Professional websites tailored for local businesses and brands.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PORTFOLIO ================= -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Selected Projects</h2>
+          <p class="section__sub">
+            A collection of websites designed and developed for businesses across multiple industries.
+          </p>
+        </div>
+
+        <div class="portfolio__grid" id="portfolioGrid">
+          <!-- Cards injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY / METRICS ================= -->
+    <section class="metrics section section--dark" id="why">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Why Work With Me</h2>
+        </div>
+
+        <div class="metrics__grid">
+          <div class="metric reveal">
+            <span class="metric__num" data-count="30" data-suffix="+">0</span>
+            <span class="metric__label">Business Websites</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="100" data-suffix="%">0</span>
+            <span class="metric__label">Responsive Designs</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="4" data-suffix="+ yrs">0</span>
+            <span class="metric__label">Industry Experience</span>
+          </div>
+          <div class="metric reveal">
+            <span class="metric__num" data-count="100" data-suffix="%">0</span>
+            <span class="metric__label">SEO Friendly Builds</span>
+          </div>
+        </div>
+
+        <ul class="metrics__points reveal">
+          <li>Fast Loading Performance</li>
+          <li>SEO Friendly Development</li>
+          <li>Clean, Maintainable Code</li>
+          <li>Conversion-Focused Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact section" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__intro reveal">
+          <span class="section__index">05</span>
+          <h2 class="section__title">Let's Build Something<br />Exceptional</h2>
+          <p class="contact__text">
+            Have a project in mind? Tell me about your business and goals — I'll get back to
+            you with a tailored plan.
+          </p>
+          <ul class="contact__details">
+            <li><span>Email</span><a href="mailto:sherwingalindo18@gmail.com">sherwingalindo18@gmail.com</a></li>
+            <li><span>WhatsApp</span><a href="https://wa.me/639282179879" target="_blank" rel="noopener">+63 928 217 9879</a></li>
+            <li><span>Availability</span>Open for new projects</li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm"
+              action="https://formsubmit.co/sherwingalindo18@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Website Inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+1 555 000 0000" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid btn--full">Submit Inquiry</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark">SG</span>
+        <h3>Sherwin Galindo</h3>
+        <p>Website Developer</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:sherwingalindo18@gmail.com">Email</a></li>
+          <li><a href="https://wa.me/639282179879" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="#" aria-label="LinkedIn (placeholder)">LinkedIn</a></li>
+          <li><a href="#" aria-label="Instagram (placeholder)">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Sherwin Galindo. All Rights Reserved.</p>
+      <button class="footer__top" id="toTop" aria-label="Back to top">Back to top &#8593;</button>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLOATING ================= -->
+  <a class="whatsapp" href="https://wa.me/639282179879" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M16.04 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.6 4.46 1.73 6.4L3.2 28.8l6.56-1.72a12.74 12.74 0 0 0 6.28 1.64h.01c7.06 0 12.8-5.73 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06A12.7 12.7 0 0 0 16.04 3.2Zm0 23.04h-.01a10.6 10.6 0 0 1-5.4-1.48l-.39-.23-4.02 1.05 1.07-3.92-.25-.4a10.58 10.58 0 0 1-1.62-5.66c0-5.86 4.77-10.62 10.63-10.62 2.84 0 5.5 1.1 7.51 3.11a10.55 10.55 0 0 1 3.11 7.52c0 5.86-4.77 10.63-10.62 10.63Zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.35-.26-.62-.52-.54-.71-.55l-.61-.01c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65 0 1.56 1.14 3.07 1.3 3.28.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.89-.77 2.16-1.52.27-.74.27-1.38.18-1.51-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+    <span class="whatsapp__pulse" aria-hidden="true"></span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
