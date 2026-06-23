@@ -386,9 +386,9 @@ h4 {
 .hero__title {
   font-size: clamp(2.4rem, 6.4vw, 5.6rem);
   font-weight: 600;
-  line-height: 1.02;
+  line-height: 1.04;
   letter-spacing: -0.03em;
-  max-width: 16ch;
+  max-width: 22ch;
 }
 .hero__subtitle {
   margin-top: 30px;
