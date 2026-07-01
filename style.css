@@ -1053,3 +1053,68 @@ h4 {
   .pcard { opacity: 1; transform: none; }
   .marquee__track { animation: none; }
 }
+
+/* ============================================================
+   NEWSLETTER BAND (Mailchimp) — hidden until configured
+   ============================================================ */
+.newsletter {
+  background: var(--c-111);
+  border-top: 1px solid var(--line);
+}
+.newsletter[hidden] { display: none; }
+.newsletter__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 54px 32px;
+  flex-wrap: wrap;
+}
+.newsletter__text h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+.newsletter__text p {
+  margin-top: 8px;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 46ch;
+}
+.newsletter__form {
+  display: flex;
+  gap: 12px;
+  flex: 1 1 320px;
+  max-width: 540px;
+}
+.newsletter__form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--white);
+  padding: 15px 18px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.4s var(--ease);
+}
+.newsletter__form input[type="email"]::placeholder { color: #777; }
+.newsletter__form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.newsletter__form .btn--solid {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+  white-space: nowrap;
+}
+.newsletter__form .btn--solid:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+@media (max-width: 600px) {
+  .newsletter__form { flex-direction: column; }
+  .newsletter__form .btn--solid { width: 100%; }
+}

@@ -64,6 +64,24 @@
     ]
   }
   </script>
+
+  <!-- ============================================================
+       THIRD-PARTY INTEGRATIONS
+       Paste your account IDs below. Leave a value as "" to keep
+       that integration OFF (nothing loads until an ID is filled in).
+       ============================================================ -->
+  <script>
+    window.SITE_CONFIG = {
+      GA4_ID: "",           /* Google Analytics 4  — e.g. "G-XXXXXXXXXX"  (Admin ▸ Data Streams) */
+      HUBSPOT_ID: "",       /* HubSpot Hub/Portal ID — e.g. "12345678"    (Settings ▸ Account Setup ▸ Tracking Code) */
+      HUBSPOT_REGION: "na1",/* HubSpot data region: "na1" (default), "eu1", etc. */
+      MAILCHIMP_ACTION: ""  /* Mailchimp embedded-form action URL (Audience ▸ Signup forms ▸ Embedded form) */
+    };
+  </script>
+
+  <!-- Google Search Console verification (static-site equivalent of Site Kit).
+       Uncomment and paste your token from Search Console ▸ Settings ▸ Ownership verification ▸ HTML tag. -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
 </head>
 
 <body>
@@ -374,6 +392,24 @@
       </div>
     </section>
   </main>
+
+  <!-- ================= NEWSLETTER (Mailchimp) ================= -->
+  <!-- Hidden until MAILCHIMP_ACTION is set in the config above. -->
+  <section class="newsletter" id="newsletter" aria-label="Newsletter signup" hidden>
+    <div class="container newsletter__inner">
+      <div class="newsletter__text">
+        <h3>Stay in the Loop</h3>
+        <p>Occasional insights on web design, performance, and business growth. No spam.</p>
+      </div>
+      <form class="newsletter__form" id="newsletterForm" method="post" target="_blank" novalidate>
+        <input type="email" name="EMAIL" id="mce-EMAIL" required
+               placeholder="Your email address" aria-label="Email address" autocomplete="email" />
+        <!-- Mailchimp bot-protection honeypot (leave empty) -->
+        <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_honeypot" tabindex="-1" value="" /></div>
+        <button type="submit" class="btn btn--solid">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">

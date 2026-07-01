@@ -1096,6 +1096,71 @@ h4 {
   .marquee__track { animation: none; }
 }
 
+/* ============================================================
+   NEWSLETTER BAND (Mailchimp) — hidden until configured
+   ============================================================ */
+.newsletter {
+  background: var(--c-111);
+  border-top: 1px solid var(--line);
+}
+.newsletter[hidden] { display: none; }
+.newsletter__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 54px 32px;
+  flex-wrap: wrap;
+}
+.newsletter__text h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+.newsletter__text p {
+  margin-top: 8px;
+  color: var(--gray);
+  font-weight: 300;
+  max-width: 46ch;
+}
+.newsletter__form {
+  display: flex;
+  gap: 12px;
+  flex: 1 1 320px;
+  max-width: 540px;
+}
+.newsletter__form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--white);
+  padding: 15px 18px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.4s var(--ease);
+}
+.newsletter__form input[type="email"]::placeholder { color: #777; }
+.newsletter__form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.newsletter__form .btn--solid {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+  white-space: nowrap;
+}
+.newsletter__form .btn--solid:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+@media (max-width: 600px) {
+  .newsletter__form { flex-direction: column; }
+  .newsletter__form .btn--solid { width: 100%; }
+}
+
 </style>
 
   <!-- Structured Data -->
@@ -1120,6 +1185,24 @@ h4 {
     ]
   }
   </script>
+
+  <!-- ============================================================
+       THIRD-PARTY INTEGRATIONS
+       Paste your account IDs below. Leave a value as "" to keep
+       that integration OFF (nothing loads until an ID is filled in).
+       ============================================================ -->
+  <script>
+    window.SITE_CONFIG = {
+      GA4_ID: "",           /* Google Analytics 4  — e.g. "G-XXXXXXXXXX"  (Admin ▸ Data Streams) */
+      HUBSPOT_ID: "",       /* HubSpot Hub/Portal ID — e.g. "12345678"    (Settings ▸ Account Setup ▸ Tracking Code) */
+      HUBSPOT_REGION: "na1",/* HubSpot data region: "na1" (default), "eu1", etc. */
+      MAILCHIMP_ACTION: ""  /* Mailchimp embedded-form action URL (Audience ▸ Signup forms ▸ Embedded form) */
+    };
+  </script>
+
+  <!-- Google Search Console verification (static-site equivalent of Site Kit).
+       Uncomment and paste your token from Search Console ▸ Settings ▸ Ownership verification ▸ HTML tag. -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
 </head>
 
 <body>
@@ -1430,6 +1513,24 @@ h4 {
       </div>
     </section>
   </main>
+
+  <!-- ================= NEWSLETTER (Mailchimp) ================= -->
+  <!-- Hidden until MAILCHIMP_ACTION is set in the config above. -->
+  <section class="newsletter" id="newsletter" aria-label="Newsletter signup" hidden>
+    <div class="container newsletter__inner">
+      <div class="newsletter__text">
+        <h3>Stay in the Loop</h3>
+        <p>Occasional insights on web design, performance, and business growth. No spam.</p>
+      </div>
+      <form class="newsletter__form" id="newsletterForm" method="post" target="_blank" novalidate>
+        <input type="email" name="EMAIL" id="mce-EMAIL" required
+               placeholder="Your email address" aria-label="Email address" autocomplete="email" />
+        <!-- Mailchimp bot-protection honeypot (leave empty) -->
+        <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_honeypot" tabindex="-1" value="" /></div>
+        <button type="submit" class="btn btn--solid">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
@@ -1980,6 +2081,47 @@ h4 {
      10. YEAR (footer safety — keeps copyright current if needed)
   ---------------------------------------------------------- */
   // Static 2026 per brief; no dynamic override required.
+
+  /* ----------------------------------------------------------
+     11. THIRD-PARTY INTEGRATIONS (config-driven)
+     Reads window.SITE_CONFIG from index.html. Each integration
+     only loads when its ID/URL is provided — otherwise it's a
+     no-op, so the page stays fast and clean until configured.
+  ---------------------------------------------------------- */
+  var cfg = window.SITE_CONFIG || {};
+
+  // --- Google Analytics 4 ---
+  if (cfg.GA4_ID) {
+    var ga = document.createElement("script");
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=" + cfg.GA4_ID;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", cfg.GA4_ID);
+  }
+
+  // --- HubSpot tracking / CRM ---
+  if (cfg.HUBSPOT_ID) {
+    var region = cfg.HUBSPOT_REGION || "na1";
+    var hs = document.createElement("script");
+    hs.async = true;
+    hs.defer = true;
+    hs.id = "hs-script-loader";
+    hs.src = "//js-" + region + ".hs-scripts.com/" + cfg.HUBSPOT_ID + ".js";
+    document.head.appendChild(hs);
+  }
+
+  // --- Mailchimp newsletter form ---
+  if (cfg.MAILCHIMP_ACTION) {
+    var nl = document.getElementById("newsletter");
+    var nlForm = document.getElementById("newsletterForm");
+    if (nl && nlForm) {
+      nlForm.action = cfg.MAILCHIMP_ACTION;
+      nl.hidden = false; // reveal only once configured
+    }
+  }
 })();
 
 </script>

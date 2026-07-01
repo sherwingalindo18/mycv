@@ -504,4 +504,45 @@
      10. YEAR (footer safety — keeps copyright current if needed)
   ---------------------------------------------------------- */
   // Static 2026 per brief; no dynamic override required.
+
+  /* ----------------------------------------------------------
+     11. THIRD-PARTY INTEGRATIONS (config-driven)
+     Reads window.SITE_CONFIG from index.html. Each integration
+     only loads when its ID/URL is provided — otherwise it's a
+     no-op, so the page stays fast and clean until configured.
+  ---------------------------------------------------------- */
+  var cfg = window.SITE_CONFIG || {};
+
+  // --- Google Analytics 4 ---
+  if (cfg.GA4_ID) {
+    var ga = document.createElement("script");
+    ga.async = true;
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=" + cfg.GA4_ID;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", cfg.GA4_ID);
+  }
+
+  // --- HubSpot tracking / CRM ---
+  if (cfg.HUBSPOT_ID) {
+    var region = cfg.HUBSPOT_REGION || "na1";
+    var hs = document.createElement("script");
+    hs.async = true;
+    hs.defer = true;
+    hs.id = "hs-script-loader";
+    hs.src = "//js-" + region + ".hs-scripts.com/" + cfg.HUBSPOT_ID + ".js";
+    document.head.appendChild(hs);
+  }
+
+  // --- Mailchimp newsletter form ---
+  if (cfg.MAILCHIMP_ACTION) {
+    var nl = document.getElementById("newsletter");
+    var nlForm = document.getElementById("newsletterForm");
+    if (nl && nlForm) {
+      nlForm.action = cfg.MAILCHIMP_ACTION;
+      nl.hidden = false; // reveal only once configured
+    }
+  }
 })();
