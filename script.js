@@ -98,7 +98,7 @@
     { name: "Steve Stein's Famous Deli", url: "https://steinsfamousdeli.com/", tag: "Restaurant" },
     { name: "Dagwood's Pub", url: "https://dagwoodspub.com/", tag: "Pub" },
     { name: "The Borough Pub", url: "https://theboroughpub.com/", tag: "Pub" },
-    { name: "Bailey's Bar & Grille", url: "https://baileysbarandgrillpa.com/", tag: "Bar & Grill" },
+    { name: "Texas Giant Media", url: "https://texasgiantmedia.com/", tag: "Media" },
     { name: "Farmhouse Tavern", url: "https://farmhousetavern.com/", tag: "Tavern" },
     { name: "Buona Via", url: "https://buonavia.com/", tag: "Restaurant" },
     { name: "Randazzo's Pizza", url: "https://randazzospizzahv.com/", tag: "Restaurant" },
