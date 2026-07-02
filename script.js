@@ -94,7 +94,7 @@
     { name: "Salon Anna Noelle", url: "https://salonannanoelle.com/", tag: "Beauty" },
     { name: "Amalio's Pizza & Pasta", url: "https://amaliospizzaandpasta.com/", tag: "Restaurant" },
     { name: "Adagio Seafood", url: "https://seafoodadagio.com/", tag: "Restaurant" },
-    { name: "Weinrich Bakery", url: "https://weinrichbakery.com/", tag: "Bakery" },
+    { name: "Johnny Apple's Restaurant", url: "https://johnnyapplesrestaurant.com/", tag: "Restaurant" },
     { name: "Steve Stein's Famous Deli", url: "https://steinsfamousdeli.com/", tag: "Restaurant" },
     { name: "Dagwood's Pub", url: "https://dagwoodspub.com/", tag: "Pub" },
     { name: "The Borough Pub", url: "https://theboroughpub.com/", tag: "Pub" },
