@@ -650,13 +650,16 @@ h4 {
    PORTFOLIO
    ============================================================ */
 .portfolio__grid {
-  columns: 3;
-  column-gap: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: stretch;
 }
 .pcard {
   position: relative;
-  break-inside: avoid;
-  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--c-f5);
   border: 1px solid var(--line-dark);
   overflow: hidden;
@@ -740,13 +743,20 @@ h4 {
   justify-content: space-between;
   gap: 16px;
   padding: 20px 22px;
+  margin-top: auto;
 }
 .pcard__name {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .pcard__tag {
+  flex: none;
   font-size: 0.66rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1009,7 +1019,7 @@ h4 {
    ============================================================ */
 @media (max-width: 1024px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
-  .portfolio__grid { columns: 2; }
+  .portfolio__grid { grid-template-columns: repeat(2, 1fr); }
   .metrics__grid { grid-template-columns: repeat(2, 1fr); row-gap: 50px; }
 }
 
@@ -1027,7 +1037,7 @@ h4 {
 @media (max-width: 600px) {
   .container { padding: 0 22px; }
   .services__grid { grid-template-columns: 1fr; }
-  .portfolio__grid { columns: 1; }
+  .portfolio__grid { grid-template-columns: 1fr; }
   .metrics__grid { grid-template-columns: 1fr 1fr; }
   .hero__actions .btn { flex: 1; }
   .contact__details li { grid-template-columns: 1fr; gap: 4px; }
